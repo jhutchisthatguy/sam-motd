@@ -6,61 +6,80 @@
     <title>Server MOTD</title>
     <style>
         body {
-            background-color: #1f1f1f;
-            color: #d3d3d3;
-            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #f1f1f1;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-size: 1.15em;
+            line-height: 1.7;
         }
         header {
-            background-color: #333;
-            padding: 20px;
+            background-color: #282828;
+            padding: 32px 20px 24px 20px;
             text-align: center;
         }
         h1 {
             color: #00bfff;
-            font-size: 2.5em;
+            font-size: 2.7em;
             margin: 0;
+            letter-spacing: 1px;
         }
         .content {
-            padding: 30px;
-            text-align: left;
+            padding: 40px 18px 30px 18px;
+            max-width: 720px;
+            margin: 0 auto;
         }
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 38px;
         }
         h2 {
             color: #00ffcc;
-            font-size: 1.8em;
+            font-size: 2em;
             border-bottom: 2px solid #00bfff;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
         }
         ul {
-            list-style: square;
-            padding-left: 20px;
+            list-style: square inside;
+            padding-left: 0;
+            margin: 0 0 0 5px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.08em;
         }
         p {
-            font-size: 1.1em;
+            font-size: 1.13em;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
         a {
-            color: #00ffcc;
-            text-decoration: none;
-            cursor: pointer;
+            color: #00ffe7;
+            text-decoration: underline;
+            font-size: 1.09em;
+            transition: color 0.18s;
         }
         a:hover {
             color: #00bfff;
         }
-        footer {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-            font-size: 0.9em;
-            display: none;
-        }
         em.shift-tip {
-            color: #aaa;
-            font-size: 0.95em;
+            color: #cccccc;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) {
+            .content {
+                padding: 12px 3vw;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
@@ -84,7 +103,10 @@
         <!-- Server Information Section -->
         <div class="section">
             <h2>Server Information</h2>
-            <p>This is a sandbox casual server where you are free to do as you wish, within reason. Build, explore, and interact with others, but remember to respect the rules and the enjoyment of fellow players!</p>
+            <p>
+                This is a sandbox casual server where you are free to do as you wish, within reason.<br>
+                Build, explore, and interact with others, but remember to respect the rules and the enjoyment of fellow players!
+            </p>
         </div>
 
         <!-- Server Commands Section -->
@@ -96,8 +118,8 @@
                 <li><strong>!thirdperson</strong> – Enables/Disables third person camera view.</li>
                 <li><strong>!buddies</strong> – Opens the gProtect buddies menu so you can give your friends permission to interact with your props</li>
                 <li><strong>!build</strong> – Enables build mode.</li>
-                <li><strong>!tp</strong> – Teleports you to a player and has a cooldown of 25s you need to type a players name after !tp.</li>
-                <li><strong>!autounstuck</strong> – Enables auto unstuck type the command again to disable.</li>
+                <li><strong>!tp</strong> – Teleports you to a player and has a cooldown of 25s. You need to type a player's name after !tp.</li>
+                <li><strong>!autounstuck</strong> – Enables auto unstuck. Type the command again to disable.</li>
                 <li><strong>!cleanupself</strong> – Removes all of your own props.</li>
                 <li><strong>!gestures</strong> – Lists gestures/acts.</li>
                 <li><strong>!cmd</strong> – Lists more commands in the chat.</li>
@@ -107,10 +129,12 @@
         <!-- Addon Collection Section -->
         <div class="section">
             <h2>Server Addon Collection</h2>
-            <p>Make sure you’ve got every custom addon we run on the server—subscribe to our full collection on Steam Workshop:</p>
+            <p>
+                Make sure you’ve got every custom addon we run on the server—subscribe to our full collection on Steam Workshop:
+            </p>
             <ul>
                 <li>
-                    <a href="" target="_blank">
+                    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=YOUR_COLLECTION_ID" target="_blank">
                         Funky Sandbox Server Addon Collection
                     </a>
                     <br>
@@ -121,28 +145,26 @@
             </ul>
         </div>
 
-        <!-- Recommendations Section -->
+        <!-- 64-bit GMod Info Section -->
         <div class="section">
-            <h2>Recommendations</h2>
-            <p>These are some suggestions to enhance your experience:</p>
-            <ul>
-                <!-- Add your recommendations here -->
-            </ul>
+            <h2>Garry's Mod 64-bit Recommended</h2>
             <p>
-                <strong>We strongly recommend using the 64-bit version of Garry's Mod for better performance and stability.</strong>
-                <br>
-                <span>
-                    <strong>Note:</strong> The <b>Media Player</b> feature <u>requires</u> 64-bit Garry's Mod to work! If you're still on 32-bit, you won't be able to see anything.
-                </span>
-                <br><br>
-                <a href="https://www.youtube.com/watch?v=iklZMVnGyQQ" target="_blank">
-                    Watch this guide on how to install and use Garry's Mod 64-bit binaries.
-                </a>
-                <br>
-                <em class="shift-tip">
-                    Tip: Hold <b>Shift</b> and click this link to open it in your browser!
-                </em>
+                For the best performance and to use all server features (like the Media Player), we <strong>strongly recommend</strong> playing Garry's Mod in 64-bit mode. If you’re still on 32-bit, some features won’t work.
             </p>
+            <p>
+                Not sure how? Watch this simple guide on how to install and use Garry's Mod 64-bit:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=iklZMVnGyQQ" target="_blank">
+                        How to Install &amp; Use Garry's Mod 64-bit (YouTube Guide)
+                    </a>
+                    <br>
+                    <em class="shift-tip">
+                        Tip: Hold <b>Shift</b> and click this link to open it in your browser!
+                    </em>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
